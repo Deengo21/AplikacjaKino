@@ -1,4 +1,6 @@
-namespace WinForms
+using WinForms;
+
+namespace AplikacjaKino.Client
 {
     internal static class Program
     {
