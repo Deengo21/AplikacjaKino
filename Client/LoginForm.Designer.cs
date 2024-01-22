@@ -29,122 +29,123 @@ namespace WinForms
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            passwordBox = new TextBox();
-            label2 = new Label();
-            loginBox = new TextBox();
-            passForgetLabel = new LinkLabel();
-            Cinema = new GroupBox();
-            groupBox1 = new GroupBox();
-            registerLabel = new LinkLabel();
-            loginButton = new Button();
-            Cinema.SuspendLayout();
-            groupBox1.SuspendLayout();
-            SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.passwordBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.loginBox = new System.Windows.Forms.TextBox();
+            this.passForgetLabel = new System.Windows.Forms.LinkLabel();
+            this.Cinema = new System.Windows.Forms.GroupBox();
+            this.loginButton = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.registerLabel = new System.Windows.Forms.LinkLabel();
+            this.Cinema.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.SuspendLayout();
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(43, 36);
-            label1.Name = "label1";
-            label1.Size = new Size(37, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Login";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(43, 36);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Login";
             // 
             // passwordBox
             // 
-            passwordBox.Location = new Point(134, 75);
-            passwordBox.Name = "passwordBox";
-            passwordBox.Size = new Size(100, 23);
-            passwordBox.TabIndex = 1;
+            this.passwordBox.Location = new System.Drawing.Point(134, 75);
+            this.passwordBox.Name = "passwordBox";
+            this.passwordBox.Size = new System.Drawing.Size(100, 23);
+            this.passwordBox.TabIndex = 1;
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(43, 78);
-            label2.Name = "label2";
-            label2.Size = new Size(37, 15);
-            label2.TabIndex = 2;
-            label2.Text = "Hasło";
-            label2.Click += label2_Click;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(43, 78);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(37, 15);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Hasło";
             // 
             // loginBox
             // 
-            loginBox.Location = new Point(134, 33);
-            loginBox.Name = "loginBox";
-            loginBox.Size = new Size(100, 23);
-            loginBox.TabIndex = 3;
+            this.loginBox.Location = new System.Drawing.Point(134, 33);
+            this.loginBox.Name = "loginBox";
+            this.loginBox.Size = new System.Drawing.Size(100, 23);
+            this.loginBox.TabIndex = 3;
+            this.loginBox.TextChanged += new System.EventHandler(this.loginBox_TextChanged);
             // 
             // passForgetLabel
             // 
-            passForgetLabel.AutoSize = true;
-            passForgetLabel.Location = new Point(16, 123);
-            passForgetLabel.Name = "passForgetLabel";
-            passForgetLabel.Size = new Size(110, 15);
-            passForgetLabel.TabIndex = 5;
-            passForgetLabel.TabStop = true;
-            passForgetLabel.Text = "Zapomniałeś hasła?";
-            passForgetLabel.LinkClicked += linkLabel1_LinkClicked;
+            this.passForgetLabel.AutoSize = true;
+            this.passForgetLabel.Location = new System.Drawing.Point(16, 123);
+            this.passForgetLabel.Name = "passForgetLabel";
+            this.passForgetLabel.Size = new System.Drawing.Size(110, 15);
+            this.passForgetLabel.TabIndex = 5;
+            this.passForgetLabel.TabStop = true;
+            this.passForgetLabel.Text = "Zapomniałeś hasła?";
             // 
             // Cinema
             // 
-            Cinema.Controls.Add(loginButton);
-            Cinema.Controls.Add(loginBox);
-            Cinema.Controls.Add(passForgetLabel);
-            Cinema.Controls.Add(label1);
-            Cinema.Controls.Add(label2);
-            Cinema.Controls.Add(passwordBox);
-            Cinema.Location = new Point(38, 26);
-            Cinema.Name = "Cinema";
-            Cinema.Size = new Size(263, 179);
-            Cinema.TabIndex = 6;
-            Cinema.TabStop = false;
-            Cinema.Text = "Logowanie";
-            // 
-            // groupBox1
-            // 
-            groupBox1.Controls.Add(registerLabel);
-            groupBox1.Location = new Point(347, 26);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(138, 93);
-            groupBox1.TabIndex = 7;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Nie masz konta?";
-            // 
-            // registerLabel
-            // 
-            registerLabel.AutoSize = true;
-            registerLabel.Location = new Point(29, 37);
-            registerLabel.Name = "registerLabel";
-            registerLabel.Size = new Size(62, 15);
-            registerLabel.TabIndex = 0;
-            registerLabel.TabStop = true;
-            registerLabel.Text = "Zarejestruj";
+            this.Cinema.Controls.Add(this.loginButton);
+            this.Cinema.Controls.Add(this.loginBox);
+            this.Cinema.Controls.Add(this.passForgetLabel);
+            this.Cinema.Controls.Add(this.label1);
+            this.Cinema.Controls.Add(this.label2);
+            this.Cinema.Controls.Add(this.passwordBox);
+            this.Cinema.Location = new System.Drawing.Point(38, 26);
+            this.Cinema.Name = "Cinema";
+            this.Cinema.Size = new System.Drawing.Size(263, 179);
+            this.Cinema.TabIndex = 6;
+            this.Cinema.TabStop = false;
+            this.Cinema.Text = "Logowanie";
             // 
             // loginButton
             // 
-            loginButton.Location = new Point(159, 119);
-            loginButton.Name = "loginButton";
-            loginButton.Size = new Size(75, 23);
-            loginButton.TabIndex = 6;
-            loginButton.Text = "Zaloguj";
-            loginButton.UseVisualStyleBackColor = true;
+            this.loginButton.Location = new System.Drawing.Point(159, 119);
+            this.loginButton.Name = "loginButton";
+            this.loginButton.Size = new System.Drawing.Size(75, 23);
+            this.loginButton.TabIndex = 6;
+            this.loginButton.Text = "Zaloguj";
+            this.loginButton.UseVisualStyleBackColor = true;
+            this.loginButton.Click += new System.EventHandler(this.loginButton_Click_1);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.registerLabel);
+            this.groupBox1.Location = new System.Drawing.Point(347, 26);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(138, 93);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Nie masz konta?";
+            // 
+            // registerLabel
+            // 
+            this.registerLabel.AutoSize = true;
+            this.registerLabel.Location = new System.Drawing.Point(29, 37);
+            this.registerLabel.Name = "registerLabel";
+            this.registerLabel.Size = new System.Drawing.Size(62, 15);
+            this.registerLabel.TabIndex = 0;
+            this.registerLabel.TabStop = true;
+            this.registerLabel.Text = "Zarejestruj";
             // 
             // LoginForm
             // 
-            AccessibleRole = AccessibleRole.None;
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(544, 232);
-            Controls.Add(groupBox1);
-            Controls.Add(Cinema);
-            Name = "LoginForm";
-            Text = "Kino";
-            Cinema.ResumeLayout(false);
-            Cinema.PerformLayout();
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
-            ResumeLayout(false);
+            this.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(544, 232);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.Cinema);
+            this.Name = "LoginForm";
+            this.Text = "Kino";
+            this.Cinema.ResumeLayout(false);
+            this.Cinema.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         #endregion

@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Projekt_Programowanie.Data;
-
 using System.Security.Cryptography;
 using System.Text;
 
@@ -17,13 +16,13 @@ namespace Projekt_Programowanie
 
         public async Task Login(string email, string password)
         {
-            
-            var employee = await _dbContext.Employees.FirstOrDefaultAsync(e => e.Email == email);
 
-            if (employee == null || !VerifyPassword(password, employee.PasswordHash))
-            {
-                throw new Exception("Nieprawidłowy adres e-mail lub hasło.");
-            }
+            //var employee = await _dbContext.Employees.FirstOrDefaultAsync(e => e.Email == email);
+
+            //if (employee == null || !VerifyPassword(password, employee.PasswordHash))
+            //{
+            //    throw new Exception("Nieprawidłowy adres e-mail lub hasło.");
+            //}
         }
 
         public async Task ManageReservations()
@@ -71,15 +70,15 @@ namespace Projekt_Programowanie
         }
 
 
-        public async Task<List<Screening>> BrowseMovieScreenings(List<Screening> upcomingScreenings)
-        {
-            // Pobierz listę nadchodzących seansów filmowych
-            var upcomingScreenings = await _dbContext.Screenings
-                .Where(ms => ms.Date > DateTime.Now)
-                .ToListAsync();
+        //public async Task<List<Screening>> BrowseMovieScreenings(List<Screening> upcomingScreenings)
+        //{
+        //    // Pobierz listę nadchodzących seansów filmowych
+        //    var upcomingScreenings = await _dbContext.Screenings
+        //        .Where(ms => ms.Date > DateTime.Now)
+        //        .ToListAsync();
 
-            return upcomingScreenings;
-        }
+        //    return upcomingScreenings;
+        //}
 
         private bool VerifyPassword(string enteredPassword, string storedHash)
         {

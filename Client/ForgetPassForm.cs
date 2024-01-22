@@ -21,5 +21,15 @@ namespace WinForms
         {
 
         }
+
+        private void fMailBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void forgetButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

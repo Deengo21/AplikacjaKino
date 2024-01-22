@@ -52,5 +52,15 @@ namespace WinForms
         {
 
         }
+
+        private void loginBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void loginButton_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

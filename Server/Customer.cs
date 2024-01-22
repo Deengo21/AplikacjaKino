@@ -28,10 +28,10 @@ public class Customer
     public async Task Register(string name, string email, string password)
     {
         // Sprawdź, czy istnieje już konto z podanym adresem e-mail
-        if (await _dbContext.Customers.AnyAsync(c => c.Email == email))
-        {
-            throw new Exception("Konto o podanym adresie e-mail już istnieje.");
-        }
+        //if (await _dbContext.Customers.AnyAsync(c => c.Email == email))
+        //{
+        //    throw new Exception("Konto o podanym adresie e-mail już istnieje.");
+        //}
 
         // Generuj unikalny token weryfikacyjny
         var verificationToken = Guid.NewGuid().ToString();
@@ -48,7 +48,7 @@ public class Customer
             IsVerified = false;
         };
 
-        _dbContext.Customers.Add(newCustomer);
+        //_dbContext.Customers.Add(newCustomer);
         await _dbContext.SaveChangesAsync();
 
         // Wyślij e-mail weryfikacyjny
@@ -91,19 +91,19 @@ public class Customer
     public async Task Login(string email, string password)
     {
         // Znajdź użytkownika o podanym adresie e-mail
-        var customer = await _dbContext.Customers.FirstOrDefaultAsync(c => c.Email == email);
+        //var customer = await _dbContext.Customers.FirstOrDefaultAsync(c => c.Email == email);
 
         // Sprawdź, czy użytkownik istnieje i czy hasło jest poprawne
-        if (customer == null || !VerifyPassword(password, customer.PasswordHash))
-        {
-            throw new Exception("Nieprawidłowy adres e-mail lub hasło.");
-        }
+        //if (customer == null || !VerifyPassword(password, customer.PasswordHash))
+        //{
+        //    throw new Exception("Nieprawidłowy adres e-mail lub hasło.");
+        //}
 
         // Sprawdź, czy konto zostało zweryfikowane
-        if (!customer.IsVerified)
-        {
-            throw new Exception("Konto nie zostało jeszcze zweryfikowane. Sprawdź e-mail w celu potwierdzenia rejestracji.");
-        }
+        //if (!customer.IsVerified)
+        //{
+        //    throw new Exception("Konto nie zostało jeszcze zweryfikowane. Sprawdź e-mail w celu potwierdzenia rejestracji.");
+        //}
 
         // Przykładowe logowanie użytkownika w aplikacji
         // Tutaj można umieścić kod logiki uwierzytelniania w aplikacji
@@ -131,7 +131,7 @@ public class Customer
             
         };
 
-        _dbContext.Reservations.Add(reservation);
+        //_dbContext.Reservations.Add(reservation);
         await _dbContext.SaveChangesAsync();
     }
     public async Task<List<Movie>> BrowseMovies(List<Movie> availableMovies)
@@ -144,16 +144,16 @@ public class Customer
             return availableMovies;
     }
 
-    public async Task<List<Reservation>> ViewHistory()
-    {
-        // Pobierz historię rezerwacji bieżącego użytkownika
-        var reservations = await _dbContext.Reservations
-            .Where(r => r.UserId == this.Id) 
-            .Include(r => r.Movie) 
-            .ToListAsync();
+    //public async Task<List<Reservation>> ViewHistory()
+    //{
+    //    // Pobierz historię rezerwacji bieżącego użytkownika
+    //    var reservations = await _dbContext.Reservations
+    //        .Where(r => r.UserId == this.Id) 
+    //        .Include(r => r.Movie) 
+    //        .ToListAsync();
 
-        return reservations;
-    }
+    //    //return reservations;
+    //}
 
 
     public bool VerifyPassword(string enteredPassword, string storedHash)
