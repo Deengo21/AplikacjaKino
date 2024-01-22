@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ExampleSocketsSSLServer": {
+      "commandName": "Project"
+    },
+    "ExampleSocketsSSLClient": {
+      "commandName": "Executable"
+    }
+  }
+}
